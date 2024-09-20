@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC");
+
+body {
+	font-family: 'Indie Flower', cursive !important;
+	background: #FDE3A7;
+	margin: 0;
+	padding: 0;
+}
+
+::selection {
+	background: transparent;
+}
+
+h4 {
+	font-size: 20px;
+	line-height: 1px;
+	font-family: 'Amatic SC', cursive !important;
+}
+
+.color1 {
+	color: #1BBC9B;
+}
+
+.color2 {
+	color: #C0392B;
+}
+
+.card {
+	color: #013243;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 530px;
+	background: #e0e1dc;
+	transform: translate(-50%, -50%) perspective(2000px);
+	box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5), 20px 0 60px rgba(0, 0, 0, 0.5);
+	transition: 1s;
+	overflow: hidden; /* Memastikan tidak ada elemen yang keluar dari card */
+}
+
+.card:hover {
+	background: #ffffff; /* Background berubah menjadi putih saat hover */
+	transform: translate(-50%, -50%) perspective(2000px) rotateY(15deg) scale(1.1);
+	box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5), 0 10px 1000px rgba(0, 0, 0, 0.5);
+	transition: 1s;
+}
+
+.imgBox {
+	width: 100%;
+	height: 60%; /* Kontainer gambar mengambil 60% dari tinggi card */
+	position: relative;
+	overflow: hidden; /* Gambar yang melebihi batas kontainer akan dipotong */
+}
+
+.bark {
+	position: absolute;
+	width: 100%;
+	height: 60%; /* Sama dengan imgBox agar tidak ada space */
+	background: #ffffff; /* Warna background putih saat membuka */
+	transform-origin: left;
+	transition: transform 1s;
+	transform: scaleX(1); /* Memulai dengan skala 1 */
+}
+.imgBox img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain	; /* Gambar akan memenuhi kontainer tanpa distorsi */
+}
+
+.card:hover .bark {
+	transform: scaleX(0); /* Menyembunyikan elemen dengan skala 0 saat hover */
+}
+
+.details {
+	position: absolute;
+	top: 10%;  Memulai tepat di bawah imgBox dan bark 
+	left: 0;
+	box-sizing: border-box;
+	padding: 0 10px; /* Padding samping untuk ruang di dalam elemen */
+	width: 100%;
+	text-align: center; /* Text rata tengah */
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.card:hover .details {
+	opacity: 1; /* Menampilkan elemen details saat hover */
+}
+
+.text-right {
+	text-align: right;
+}
+
+.button {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #1BBC9B;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+	background-color: #16a085;
+	transform: scale(1.05);
+}
+
+audio {
+	display: none;
+}
+

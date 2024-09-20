@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hallo Chintya</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio autoplay controls id=myAudio>
+        <source src="1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container">
+        <h1>Happy Birthday Chintya Yulindra</h1>
+        <p>Ciee udah 24 Tahun</p>
+        <div class="cake">
+            🎂
+        </div>
+        <button onclick="showMessage()">Click for a surprise!</button>
+        <p id="surprise" class="hidden"> Coba Lagi :P 🎉 </br>
+            <br>
+        <a href="../chintya/ucapan/index.html"><button >hehehe yang ini beneran</button></a>
+        </p>
+       
+    </div>
+    <div>
+        
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('surprise').classList.toggle('hidden');
+        }
+        
+    </script>
+    <script>
+        navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+        
+       var x = document.getElementById("myAudio"); 
+       x.play();
+    
+        // stop microphone stream acquired by getUserMedia
+        stream.getTracks().forEach(function (track) { track.stop(); });
+    });
+    </script>
+    
+</body>
+</html>

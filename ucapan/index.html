@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https:/fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link href="https:/fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	 <link rel="stylesheet" href="style.css">
+	<title></title>
+</head>
+<body>
+	<audio autoplay controls id=myAudio>
+		<source src="serta.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	<div class="card">
+		<div class="imgbox">
+			
+			<div class="details" >
+				<h4 class="color1">HAPPY BIRTHDAY</h4>
+				<h4 class="color2">KAMU HARUS DIRAYAKAN</h4>
+				<font size="2"><p>Selamat Ulang Tahun Cantik.... yang ke 24</p>
+				<p>Jangan Sering nangis ya, ayo senyum</p>
+				<p> Aku harap kamu jauh lebih baik dan kuat </p>
+				<p>dari yang kemarin. tetap bertahan jangan runtuhin</p>
+				<p> diri kamu dengan omongan orang-orang jahat</p>
+
+				<p>You know? You are Special :)</p></font>
+				<p class="text-right"> Happy Birthday, Chintya</p>
+				<br>
+				<p class="text-right"> Achmad </p>
+				<p>
+					<a href="../../chintya/kado/index.html" class="button">Klik ya, ada satu lagi</a> <!-- Tombol baru -->
+				</p>
+			</div>
+
+			<div class="bark" height=30% width=30%>
+				<img src="toy.JPG" >
+			</div>
+					
+
+		</div>
+	</div>
+	<script>
+	   navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+        
+       var x = document.getElementById("myAudio"); 
+       x.play();
+    
+        // stop microphone stream acquired by getUserMedia
+        stream.getTracks().forEach(function (track) { track.stop(); });
+    });
+	</script>
+
+</body>
+</html>
